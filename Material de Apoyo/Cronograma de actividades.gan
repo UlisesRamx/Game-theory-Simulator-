@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Game Theory Simulator" company="Kuantik Data Jump" webLink="http://" view-date="2025-08-27" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3316" locale="es_MX">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="" month="1" date="1" type="HOLIDAY"><![CDATA[New Year's Day]]></date>
+        <date year="" month="5" date="1" type="HOLIDAY"><![CDATA[Labour Day]]></date>
+        <date year="" month="9" date="16" type="HOLIDAY"><![CDATA[Independence Day]]></date>
+        <date year="" month="11" date="1" type="NEUTRAL"><![CDATA[All Saints Day]]></date>
+        <date year="" month="11" date="2" type="NEUTRAL"><![CDATA[Day of the Dead]]></date>
+        <date year="" month="12" date="12" type="HOLIDAY"><![CDATA[Day of the Virgin of Guadalupe]]></date>
+        <date year="" month="12" date="25" type="HOLIDAY"><![CDATA[Christmas Day]]></date>
+        <date year="2025" month="2" date="3" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2025" month="3" date="17" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2025" month="4" date="17" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2025" month="4" date="18" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2025" month="10" date="12" type="HOLIDAY"><![CDATA[Day of the Pluricultural Nation]]></date>
+        <date year="2025" month="11" date="17" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2022" month="2" date="7" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2022" month="3" date="21" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2022" month="4" date="14" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2022" month="4" date="15" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2022" month="11" date="21" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2016" month="2" date="1" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2016" month="3" date="14" type="HOLIDAY"><![CDATA[Birthday of Benito Juárez]]></date>
+        <date year="2016" month="3" date="24" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2016" month="3" date="25" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2016" month="11" date="21" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2017" month="1" date="2" type="HOLIDAY"><![CDATA[New Year's Holiday]]></date>
+        <date year="2017" month="2" date="6" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2017" month="3" date="20" type="HOLIDAY"><![CDATA[Day off for Benito Juárez's Birthday Memorial]]></date>
+        <date year="2017" month="3" date="21" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday Memorial]]></date>
+        <date year="2017" month="4" date="13" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2017" month="4" date="14" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2017" month="11" date="20" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2018" month="2" date="5" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2018" month="3" date="19" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2018" month="3" date="29" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2018" month="3" date="30" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2018" month="11" date="19" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2018" month="12" date="1" type="HOLIDAY"><![CDATA[New President of Mexico]]></date>
+        <date year="2019" month="2" date="4" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2019" month="3" date="18" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2019" month="4" date="18" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2019" month="4" date="19" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2019" month="11" date="18" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2020" month="2" date="3" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2020" month="3" date="16" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2020" month="4" date="9" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2020" month="4" date="10" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2020" month="11" date="16" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+        <date year="2021" month="2" date="1" type="HOLIDAY"><![CDATA[Constitution Day]]></date>
+        <date year="2021" month="3" date="15" type="HOLIDAY"><![CDATA[Benito Juárez's Birthday]]></date>
+        <date year="2021" month="4" date="1" type="HOLIDAY"><![CDATA[Maundy Thursday]]></date>
+        <date year="2021" month="4" date="2" type="HOLIDAY"><![CDATA[Good Friday]]></date>
+        <date year="2021" month="11" date="16" type="HOLIDAY"><![CDATA[Revolution Day]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="15ace1b5678a4d90bd19ebd98cda4d74" name="Capacitación" meeting="false" start="2025-08-18" duration="13" complete="0" expand="true">
+            <task id="1" uid="2ef7d9ea9a9543759590784084f61e1e" name="Lectura sobre Teoría de juegos" meeting="false" start="2025-08-18" duration="13" complete="0" expand="true"/>
+            <task id="2" uid="01edf34616e54382b8b62efd1df66b15" name="Ejercicios de Teoría de juegos" meeting="false" start="2025-08-25" duration="8" complete="0" expand="true"/>
+        </task>
+        <task id="3" uid="a1ebdca764b54a18963203bd9e338188" name="Requerimientos" meeting="false" start="2025-09-02" duration="9" complete="0" expand="true">
+            <task id="7" uid="3e3d0a55058b4ecc9a650e22100e96ce" name="Documento de requerimientos" meeting="false" start="2025-09-02" duration="9" complete="0" expand="true"/>
+            <task id="8" uid="8c705ddc12db4295bac8d22a39383c90" name="Identificación de requerimientos" meeting="false" start="2025-09-02" duration="3" complete="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" uid="088bc8a34cbb4017a65488723118f4fd" name="Diagrama de dominio" meeting="false" start="2025-09-05" duration="3" complete="0" expand="true"/>
+            <task id="10" uid="2139c5cd145b4c89a5604bf372712b0d" name="Modelo de clase inicial" meeting="false" start="2025-09-09" duration="3" complete="0" expand="true"/>
+            <task id="11" uid="76a361574e7044e794112f06789e9558" name="Identificación de casos de uso" meeting="false" start="2025-09-11" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="4" uid="63452e15492b4b0eb714465c071b080a" name="Diseño" meeting="false" start="2025-09-17" duration="14" complete="0" expand="true"/>
+        <task id="5" uid="90fd4a241b8a4455a50df34aabc1aa09" name="Construcción" meeting="false" start="2025-10-15" duration="23" complete="0" expand="true"/>
+        <task id="6" uid="af881d3eb229459f914a0c649cbd3070" name="Pruebas" meeting="false" start="2025-09-10" duration="55" complete="0" expand="true"/>
+        <task id="12" uid="76b0ad81a9ca4f3e94c461e36cb21e6d" name="task_12" meeting="false" start="2025-08-27" duration="1" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Ulises Ramos Mexicano" function="Default:0" contacts="ulisesram19@gmail.com" phone="9212298747"/>
+    </resources>
+    <allocations>
+        <allocation task-id="1" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="2" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="8" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="10" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
