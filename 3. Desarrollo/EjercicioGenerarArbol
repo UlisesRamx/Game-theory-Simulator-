@@ -1,0 +1,150 @@
+import networkx as nx
+from networkx.drawing.nx_pydot import to_pydot
+import graphviz
+from collections import deque
+
+
+Rondas = 4         
+# Jugador = 3      
+Estrategias = 2
+# ---------------------------------------------------------------------
+# 1) Construcción del árbol en NetworkX, guardando la profundidad por nodo
+# ---------------------------------------------------------------------
+G = nx.DiGraph()
+
+def generar_arbol(rondas, estrategias):
+    G.clear()
+    G.add_node(0, depth=0)  # raíz
+
+    contador = 0
+    def agregar_nodos(padre, profundidad):
+        nonlocal contador
+        if profundidad > rondas:
+            return
+        for _ in range(estrategias):
+            contador += 1
+            hijo = contador
+            G.add_node(hijo, depth=profundidad)
+            G.add_edge(padre, hijo)  # mantiene orden de inserción (izq->der)
+            agregar_nodos(hijo, profundidad + 1)
+
+    agregar_nodos(0, 1)
+    return G
+
+generar_arbol(Rondas, Estrategias)
+
+# ---------------------------------------------------------------------
+# 2) Etiquetar nodos:
+#    - root
+#    - X1, X2, ... (internos) en BFS por nivel
+#    - Z1, Z2, ... (hojas) en el último nivel
+# ---------------------------------------------------------------------
+def etiquetar_nodos_bfs(g, rondas):
+    x_count, z_count = 0, 0
+    for n in g.nodes:
+        g.nodes[n].pop('label', None)
+
+    q = deque([0])
+    visit = {0}
+    g.nodes[0]['label'] = "root"
+
+    while q:
+        u = q.popleft()
+        for v in g.successors(u):
+            if v in visit:
+                continue
+            visit.add(v)
+            if g.nodes[v]['depth'] == rondas:
+                z_count += 1
+                g.nodes[v]['label'] = f"Z{z_count}"
+            else:
+                x_count += 1
+                g.nodes[v]['label'] = f"X{x_count}"
+            q.append(v)
+
+etiquetar_nodos_bfs(G, Rondas)
+
+# ---------------------------------------------------------------------
+# 3) Etiquetar ARISTAS:
+#    - Raíz: etiquetar TODAS sus aristas (S1..S_Estrategias)
+#    - Subárbol del PRIMER hijo de la raíz: etiquetar TODAS sus aristas en PREORDEN
+#    - No etiquetar más aristas fuera de ese subárbol
+# ---------------------------------------------------------------------
+def etiquetar_aristas_esquema(g, rondas):
+    # Limpiar etiquetas previas de aristas
+    for u, v in g.edges():
+        g.edges[u, v].pop('label', None)
+
+    s_count = 0
+
+    # 3.1) Aristas desde la raíz
+    root = 0
+    hijos_root = list(g.successors(root))
+    for v in hijos_root:
+        s_count += 1
+        g.edges[root, v]['label'] = f"S{s_count}"
+
+    # 3.2) Etiquetar TODO el subárbol del PRIMER hijo (si existe), en PREORDEN
+    if hijos_root:
+        first_child = hijos_root[0]
+
+        def dfs_etiquetar(u):
+            nonlocal s_count
+            hijos = list(g.successors(u))
+            # Etiquetar primero aristas que salen de u (izq->der)
+            for v in hijos:
+                s_count += 1
+                g.edges[u, v]['label'] = f"S{s_count}"
+            # Bajar por cada hijo si no es hoja
+            for v in hijos:
+                if g.nodes[v]['depth'] < rondas:
+                    dfs_etiquetar(v)
+
+        # sólo si no es hoja (si fuera hoja, su subárbol no tiene aristas)
+        if g.nodes[first_child]['depth'] < rondas:
+            dfs_etiquetar(first_child)
+
+etiquetar_aristas_esquema(G, Rondas)
+
+# ---------------------------------------------------------------------
+# 4) Render con Graphviz
+# ---------------------------------------------------------------------
+pyd = to_pydot(G)
+pyd.set_rankdir("TB")   # Top -> Bottom
+pyd.set_splines("true")
+pyd.set_overlap("false")
+pyd.set_ranksep("0.5")
+pyd.set_nodesep("0.3")
+
+# Estilo de nodos: internos X* vs hojas Z*
+palette = ["#E3F2FD", "#E8F5E9", "#FFF3E0", "#F3E5F5", "#E0F7FA", "#FFFDE7"]
+for node in pyd.get_nodes():
+    attrs = node.get_attributes()
+    depth = attrs.get("depth")
+    label = attrs.get("label", "")
+
+    node.set_shape("circle")
+    node.set_style("filled")
+    node.set_fontsize("22")
+    node.set_color("#444444")
+    node.set_penwidth("2")
+
+    if isinstance(label, str) and label.startswith("Z"):
+        node.set_fillcolor("#FFE0E0")  # hojas en rojizo suave
+    else:
+        try:
+            d = int(depth) if depth is not None else 0
+        except:
+            d = 0
+        node.set_fillcolor(palette[d % len(palette)])
+
+# Estilo de aristas (muestra S_n cuando exista)
+for edge in pyd.get_edges():
+    edge.set_color("#666666")
+    edge.set_fontsize("16")
+    edge.set_penwidth("1")
+
+dot_str = pyd.to_string()
+src = graphviz.Source(dot_str, format="png")
+src.render("arbol_estrategias", cleanup=True)
+print("Árbol renderizado en: arbol_estrategias.png")

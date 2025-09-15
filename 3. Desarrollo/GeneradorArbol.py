@@ -4,9 +4,12 @@ from networkx.drawing.nx_pydot import write_dot, graphviz_layout
 import matplotlib.pyplot as plt
 
 G = nx.DiGraph()
-Rondas = 4
+Rondas = 2
 ##Jugador = 3
-Estrategias = 4
+Estrategias = 3
+TotalEstrategias = 0
+
+
 
 def generar_arbol(Rondas, Estrategias): 
     contador_nodos = [0]
@@ -17,7 +20,7 @@ def generar_arbol(Rondas, Estrategias):
         for _ in range(Estrategias): 
             contador_nodos[0] += 1 
             hijo = contador_nodos[0] 
-            G.add_edge(padre, hijo) 
+            G.add_edge(padre, hijo, id=TotalEstrategias) 
             agregar_nodos(hijo, profundidad + 1) 
  
     G.add_node(0)
@@ -31,4 +34,5 @@ nx.draw(G, pos, with_labels=True, node_size=350, node_color='lightblue')
 plt.title('draw_networkx')
 ###plt.savefig('nx_test1.png')
 plt.show()
+print(G.edges(data=True))
 print(G)
