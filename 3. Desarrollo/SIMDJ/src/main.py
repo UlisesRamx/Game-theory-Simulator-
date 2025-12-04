@@ -2,6 +2,7 @@ from __future__ import annotations
 import os
 import sys
 
+#Pribando la rama Prueba 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = BASE_DIR
 
