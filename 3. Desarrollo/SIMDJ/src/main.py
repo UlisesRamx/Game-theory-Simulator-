@@ -1,13 +1,3 @@
-"""
-Punto de entrada de SIM-DJ (CLI).
-Inicializa todos los servicios, controladores y ejecuta el CLIHandler.
-
-REFACTORIZADO para:
-- Inyección de dependencias (sin singletons)
-- Compatibilidad con código refactorizado
-- PEP8 compliance
-"""
-
 from __future__ import annotations
 import os
 import sys
