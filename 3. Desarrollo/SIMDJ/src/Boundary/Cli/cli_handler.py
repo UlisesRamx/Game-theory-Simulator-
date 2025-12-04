@@ -228,9 +228,7 @@ class CLIHandler:
                 )
 
     def _handle_post_creation(self, context: str) -> None:
-        game_summary = self.dispatcher.execute("get_game_summary")
-        if context not in ("edición"):
-            self._handle_show_tree(context)    
+        game_summary = self.dispatcher.execute("get_game_summary")   
         self._handle_configure_order(context)
         result = self._capture_payoffs(game_summary["total_histories"])
         self._show_final_summary(game_summary, result)

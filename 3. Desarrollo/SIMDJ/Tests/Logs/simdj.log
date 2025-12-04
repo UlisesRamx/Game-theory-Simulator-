@@ -1,3 +1,121 @@
 [2025-12-04 11:07:32] INFO: Sesión inicializada/reiniciada
 [2025-12-04 11:07:32] INFO: Sistema SIM-DJ iniciado
 [2025-12-04 11:07:36] INFO: Sistema SIM-DJ finalizado normalmente
+[2025-12-04 15:01:47] INFO: Sesión inicializada/reiniciada
+[2025-12-04 15:01:47] INFO: Sistema SIM-DJ iniciado
+[2025-12-04 15:01:53] INFO: Ejecutando comando: create_game
+[2025-12-04 15:01:53] INFO: Iniciando construcción del árbol...
+[2025-12-04 15:01:53] INFO: Árbol construido: escenarios=7, acciones=6
+[2025-12-04 15:01:53] INFO: Configuración actualizada: 2 jugadores, 2 rondas, 2 estrategias
+[2025-12-04 15:01:53] INFO: Orden de jugadores establecido: 2 jugadores
+[2025-12-04 15:01:53] INFO: Juego activo establecido: 1
+[2025-12-04 15:01:53] INFO: [CU-01] Juego creado exitosamente: 2 jugadores, 2 rondas, 2 estrategias
+[2025-12-04 15:01:53] INFO: Comando 'create_game' ejecutado exitosamente
+[2025-12-04 15:01:53] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:01:53] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:01:54] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:01:54] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:01:55] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:01:55] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:02:02] INFO: Ejecutando comando: register_payoffs
+[2025-12-04 15:02:02] INFO: 8 payoffs guardados en sesión
+[2025-12-04 15:02:02] INFO: 4 historias temporales guardadas
+[2025-12-04 15:02:02] INFO: [CU-01] 8 payoffs registrados exitosamente
+[2025-12-04 15:02:02] INFO: Comando 'register_payoffs' ejecutado exitosamente
+[2025-12-04 15:02:02] INFO: Ejecutando comando: get_player_order_preview
+[2025-12-04 15:02:02] INFO: Comando 'get_player_order_preview' ejecutado exitosamente
+[2025-12-04 15:02:06] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:02:06] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:02:19] INFO: Ejecutando comando: show_tree
+[2025-12-04 15:02:20] INFO: Árbol exportado en: C:\Users\ulise\Documents\UV\9 semestre\GTS\3. Desarrollo\SIMDJ\Tests\Exports\Trees\ArbolDecisiones_J2_R2_E2_20251204-1502.svg
+[2025-12-04 15:02:20] INFO: [CU-03] SVG de Árbol generado correctamente
+[2025-12-04 15:02:20] INFO: Comando 'show_tree' ejecutado exitosamente
+[2025-12-04 15:02:37] INFO: Sistema SIM-DJ finalizado normalmente
+[2025-12-04 15:06:52] INFO: Sesión inicializada/reiniciada
+[2025-12-04 15:06:52] INFO: Sistema SIM-DJ iniciado
+[2025-12-04 15:07:02] INFO: Ejecutando comando: create_game
+[2025-12-04 15:07:02] INFO: Iniciando construcción del árbol...
+[2025-12-04 15:07:02] INFO: Árbol construido: escenarios=7, acciones=6
+[2025-12-04 15:07:02] INFO: Configuración actualizada: 2 jugadores, 2 rondas, 2 estrategias
+[2025-12-04 15:07:02] INFO: Orden de jugadores establecido: 2 jugadores
+[2025-12-04 15:07:02] INFO: Juego activo establecido: 1
+[2025-12-04 15:07:02] INFO: [CU-01] Juego creado exitosamente: 2 jugadores, 2 rondas, 2 estrategias
+[2025-12-04 15:07:02] INFO: Comando 'create_game' ejecutado exitosamente
+[2025-12-04 15:07:02] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:07:02] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:07:02] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:07:02] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:07:03] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:07:03] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:07:08] INFO: Ejecutando comando: register_payoffs
+[2025-12-04 15:07:08] INFO: 8 payoffs guardados en sesión
+[2025-12-04 15:07:08] INFO: 4 historias temporales guardadas
+[2025-12-04 15:07:08] INFO: [CU-01] 8 payoffs registrados exitosamente
+[2025-12-04 15:07:08] INFO: Comando 'register_payoffs' ejecutado exitosamente
+[2025-12-04 15:07:08] INFO: Ejecutando comando: get_player_order_preview
+[2025-12-04 15:07:08] INFO: Comando 'get_player_order_preview' ejecutado exitosamente
+[2025-12-04 15:07:11] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:07:11] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:07:12] INFO: Ejecutando comando: get_scenarios_for_probability_assignment
+[2025-12-04 15:07:12] INFO: Comando 'get_scenarios_for_probability_assignment' ejecutado exitosamente
+[2025-12-04 15:07:16] INFO: Ejecutando comando: assign_prob
+[2025-12-04 15:07:16] INFO: [ProbabilityAssigner] Probabilidades asignadas a 2 acciones.
+[2025-12-04 15:07:16] INFO: [ProbabilityAssigner] Validación escenario X0: suma=1.000000, ok
+[2025-12-04 15:07:16] INFO: [CU-04] Probabilidades asignadas: asignadasal escenario 1: [0.5, 0.5]
+[2025-12-04 15:07:16] INFO: Comando 'assign_prob' ejecutado exitosamente
+[2025-12-04 15:07:19] INFO: Ejecutando comando: assign_prob
+[2025-12-04 15:07:19] INFO: [ProbabilityAssigner] Probabilidades asignadas a 2 acciones.
+[2025-12-04 15:07:19] INFO: [ProbabilityAssigner] Validación escenario X1: suma=1.000000, ok
+[2025-12-04 15:07:19] INFO: [CU-04] Probabilidades asignadas: asignadasal escenario 2: [0.9, 0.1]
+[2025-12-04 15:07:19] INFO: Comando 'assign_prob' ejecutado exitosamente
+[2025-12-04 15:07:21] INFO: Ejecutando comando: assign_prob
+[2025-12-04 15:07:21] INFO: [ProbabilityAssigner] Probabilidades asignadas a 2 acciones.
+[2025-12-04 15:07:21] INFO: [ProbabilityAssigner] Validación escenario X2: suma=1.000000, ok
+[2025-12-04 15:07:21] INFO: [CU-04] Probabilidades asignadas: asignadasal escenario 3: [0.7, 0.3]
+[2025-12-04 15:07:21] INFO: Comando 'assign_prob' ejecutado exitosamente
+[2025-12-04 15:07:21] INFO: Ejecutando comando: finalize_probability_assignment
+[2025-12-04 15:07:21] INFO: [ProbabilityAssigner] Resumen generado.
+[2025-12-04 15:07:21] INFO: Probabilidades guardadas en sesión
+[2025-12-04 15:07:21] INFO: [CU-04] Resumen de probabilidades guardado
+[2025-12-04 15:07:21] INFO: Estado del juego actualizado: RUNNING
+[2025-12-04 15:07:21] INFO: Estado del juego actualizado a: RUNNING
+[2025-12-04 15:07:21] INFO: Comando 'finalize_probability_assignment' ejecutado exitosamente
+[2025-12-04 15:07:25] INFO: Ejecutando comando: generate_histories
+[2025-12-04 15:07:25] INFO: [HistoryGenerator] Generando historias (DFS)...
+[2025-12-04 15:07:25] INFO: [HistoryGenerator] 4 historias generadas exitosamente.
+[2025-12-04 15:07:25] INFO: 4 historias guardadas en sesión
+[2025-12-04 15:07:25] INFO: [CU-05] 8 payoffs asignados a 4 historias
+[2025-12-04 15:07:25] INFO: [CU-05] 4 historias generadas correctamente
+[2025-12-04 15:07:25] INFO: Comando 'generate_histories' ejecutado exitosamente
+[2025-12-04 15:07:25] INFO: Ejecutando comando: get_histories_samples
+[2025-12-04 15:07:25] INFO: Comando 'get_histories_samples' ejecutado exitosamente
+[2025-12-04 15:07:38] INFO: Ejecutando comando: calculate_utilities
+[2025-12-04 15:07:38] INFO: [CU-05] 8 payoffs asignados a 4 historias
+[2025-12-04 15:07:38] INFO: [UtilityCalculator] Matriz de utilidades generada: 4 historias × 2 jugadores.
+[2025-12-04 15:07:38] INFO: Matriz de utilidades guardada en sesión
+[2025-12-04 15:07:38] INFO: [CU-06] Utilidades calculadas para 4 historias
+[2025-12-04 15:07:38] INFO: Estado del juego actualizado: RUNNING
+[2025-12-04 15:07:38] INFO: Estado del juego actualizado a: RUNNING
+[2025-12-04 15:07:38] INFO: Comando 'calculate_utilities' ejecutado exitosamente
+[2025-12-04 15:07:42] INFO: Ejecutando comando: identify_equilibria
+[2025-12-04 15:07:42] INFO: [EquilibriumFinder] 4 equilibrios encontrados.
+[2025-12-04 15:07:42] INFO: 4 perfiles de equilibrio guardados en sesión
+[2025-12-04 15:07:42] INFO: 4 equilibrios guardados en sesión
+[2025-12-04 15:07:42] INFO: [CU-06] 4 equilibrios identificados
+[2025-12-04 15:07:42] INFO: Comando 'identify_equilibria' ejecutado exitosamente
+[2025-12-04 15:07:49] INFO: Ejecutando comando: finalize_utilities_calculation
+[2025-12-04 15:07:49] INFO: Estado del juego actualizado: RUNNING
+[2025-12-04 15:07:49] INFO: Estado del juego actualizado a: RUNNING
+[2025-12-04 15:07:49] INFO: [CU-06] Juego marcado como COMPLETED después del cálculo de utilidades
+[2025-12-04 15:07:49] INFO: Comando 'finalize_utilities_calculation' ejecutado exitosamente
+[2025-12-04 15:08:00] INFO: Ejecutando comando: get_game_summary
+[2025-12-04 15:08:00] INFO: Comando 'get_game_summary' ejecutado exitosamente
+[2025-12-04 15:08:39] INFO: Ejecutando comando: export_complete_results
+[2025-12-04 15:08:39] INFO: Exportados 4 equilibrios en formato tabular
+[2025-12-04 15:08:39] INFO: Excel exportado: C:\Users\ulise\Documents\UV\9 semestre\GTS\3. Desarrollo\SIMDJ\Tests\Exports\Excel\Game_J2_R2_E2_20251204-1508_completo.xlsx
+[2025-12-04 15:08:39] INFO: [CU-07] Resultados exportados a Excel: C:\Users\ulise\Documents\UV\9 semestre\GTS\3. Desarrollo\SIMDJ\Tests\Exports\Excel\Game_J2_R2_E2_20251204-1508_completo.xlsx
+[2025-12-04 15:08:39] INFO: Comando 'export_complete_results' ejecutado exitosamente
+[2025-12-04 15:08:39] INFO: Ejecutando comando: show_tree
+[2025-12-04 15:08:40] INFO: Árbol exportado en: C:\Users\ulise\Documents\UV\9 semestre\GTS\3. Desarrollo\SIMDJ\Tests\Exports\Trees\ArbolDecisiones_J2_R2_E2_20251204-1508.svg
+[2025-12-04 15:08:40] INFO: [CU-03] SVG de Árbol generado correctamente
+[2025-12-04 15:08:40] INFO: Comando 'show_tree' ejecutado exitosamente
