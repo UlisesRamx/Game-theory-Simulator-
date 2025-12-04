@@ -121,7 +121,7 @@ class CLIFormatter:
             "Seleccione el tipo de exportación que desea realizar:\n"
             "[1] Exportar Matriz de Probabilidades, Historias y Utilidades (CSV)\n"
             "[2] Exportar Árbol de decisiones (SVG)\n"
-            "[3] Exportar Ambos (ZIP)\n"
+            "[3] Exportar Ambos\n"
             "[4] Volver al Submenú de Simulación\n"
             "=======================================================\n"
         )
