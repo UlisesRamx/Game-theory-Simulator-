@@ -35,12 +35,6 @@ class DomainValidator:
                 user_message=f"Debe ingresar exactamente {len(game_players)} IDs de jugadores."
             )
         
-        if len(set(player_ids)) != len(player_ids):
-            raise InvalidInputError(
-                technical_message="Hay IDs de jugadores duplicados",
-                user_message="Los IDs de los jugadores no pueden repetirse."
-            )
-        
         player_id_map = {player.player_id: player for player in game_players}
         missing_ids = []
         

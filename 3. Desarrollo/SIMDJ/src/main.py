@@ -2,7 +2,6 @@ from __future__ import annotations
 import os
 import sys
 
-#Pribando la rama Prueba 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SRC_DIR = BASE_DIR
 
@@ -42,15 +41,9 @@ from Infrastructure.Common.technical_validator import TechnicalValidator
 def main() -> None:
     print("Iniciando SIM-DJ - Sistema de Simulación de Teoría de Juegos...")
     try:
-        # ===========================================================
-        # 1. INFRAESTRUCTURA - Common
-        # ===========================================================
         logger = Logger()
         technical_validator = TechnicalValidator()
 
-        # ===========================================================
-        # 2. INFRAESTRUCTURA - Export
-        # ===========================================================
         naming_service = NamingService()        
 
         excel_exporter = ExcelExporter(
@@ -66,14 +59,8 @@ def main() -> None:
 
         )
 
-        # ===========================================================
-        # 3. DOMAIN - Common
-        # ===========================================================
         domain_validator = DomainValidator()
 
-        # ===========================================================
-        # 4. DOMAIN - Simulation
-        # ===========================================================
         tree_builder = TreeBuilder(
             logger=logger,
             domain_validator=domain_validator
@@ -99,9 +86,6 @@ def main() -> None:
             domain_validator=domain_validator
         )
 
-        # ===========================================================
-        # 6. CONTROL - App
-        # ===========================================================
         session_manager = SessionManager(
             logger=logger,
             technical_validator=technical_validator           
@@ -127,9 +111,6 @@ def main() -> None:
             game_controller=game_controller
         )
 
-        # ===========================================================
-        # 8. Boundary - Cli
-        # ===========================================================
         command_parser = CommandParser()
 
         cli_formatter = CLIFormatter()
@@ -143,9 +124,6 @@ def main() -> None:
             logger=logger
         )
 
-        # ===========================================================
-        # 10. EJECUCIÓN
-        # ===========================================================
         print("Sistema configurado correctamente")
         print("Usa la opción [4] para salir del sistema\n")
         
