@@ -25,7 +25,7 @@ class InvalidInputError(GameException):
 class NoActiveGameError(GameException):
     def __init__(self, technical_message: str = "No hay juego activo", user_message: str = None):
         user_msg = user_message or "No hay Juego Activo. Cree un nuevo JUEGO desde el Menú Principal."
-        super().__init__(technical_message, user_msg)  # ✅ Ahora acepta user_message
+        super().__init__(technical_message, user_msg) 
 
 class PlayerOrderError(GameException):
     def __init__(self, technical_message: str, user_message: str = None):

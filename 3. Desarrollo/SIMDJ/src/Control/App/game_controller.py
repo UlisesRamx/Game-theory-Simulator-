@@ -242,7 +242,7 @@ class GameController:
                 self.technical_validator.validate_positive_integer(pid, "ID de jugador")
             
             self.domain_validator.validate_game_state_for_configuration(game)
-            self.domain_validator.validate_player_order_configuration(player_ids, game.players)
+            self.domain_validator.validate_player_order_configuration(player_ids, self.session.player_order)
             
             player_id_map = {player.player_id: player for player in game.players}
             player_objects = [player_id_map[pid] for pid in player_ids]
@@ -564,7 +564,6 @@ class GameController:
         if game.state != GameState.RUNNING:
             raise ValueError("El juego no está en estado RUNNING")
 
-    #Listo
     def _assign_histories_to_payoffs(self) -> bool:
         try:
             histories = self.session.history_list
@@ -577,28 +576,43 @@ class GameController:
                 self.logger.log_info("No hay payoffs para asignar historias")
                 raise MissingValueError("No hay payoffs para asignar historias")
                     
-            players = self.session.player_order
-            players_count = len(players)
+            unique_player_count = self.session.num_players
             
-            expected_payoffs = len(histories) * players_count
+            all_players = self.session.player_order
+            unique_players = []
+            seen_player_ids = set()
+            for player in all_players:
+                player_id = getattr(player, 'player_id', str(player))
+                if player_id not in seen_player_ids:
+                    seen_player_ids.add(player_id)
+                    unique_players.append(player)
+            
+            if len(unique_players) != unique_player_count:
+                self.logger.log_warning(
+                    f"Numero de jugadores unicos ({len(unique_players)}) "
+                    f"no coincide con configuracion ({unique_player_count})"
+                )
+                unique_player_count = len(unique_players)
+            
+            expected_payoffs = len(histories) * unique_player_count
             if len(payoffs) != expected_payoffs:
                 self.logger.log_warning(
                     f"Número de payoffs ({len(payoffs)}) no coincide con "
-                    f"historias×jugadores ({len(histories)}×{players_count} = {expected_payoffs})"
+                    f"historias×jugadores_únicos ({len(histories)}×{unique_player_count} = {expected_payoffs})"
                 )
                 raise ValueError(
                     f"Número de payoffs ({len(payoffs)}) no coincide con "
-                    f"historias×jugadores ({len(histories)}×{players_count} = {expected_payoffs})")
+                    f"historias×jugadores_únicos ({len(histories)}×{unique_player_count} = {expected_payoffs})")
             
             for payoff_index, payoff in enumerate(payoffs):
-                history_index = payoff_index // players_count
-                player_index = payoff_index % players_count
+                history_index = payoff_index // unique_player_count
+                player_index = payoff_index % unique_player_count
                 
                 if history_index < len(histories):
                     payoff.history = histories[history_index]
                     
-                    if player_index < len(players):
-                        payoff.player = players[player_index]
+                    if player_index < len(unique_players):
+                        payoff.player = unique_players[player_index]
                         
                     if hasattr(payoff.history, 'total_probability'):
                         payoff.calculate_expected_utility(payoff.history.total_probability)
@@ -607,14 +621,15 @@ class GameController:
             game.payoffs = list(payoffs)
 
             self.logger.log_info(
-                f"[CU-05] {len(payoffs)} payoffs asignados a {len(histories)} historias"
+                f"[CU-05] {len(payoffs)} payoffs asignados a {len(histories)} historias "
+                f"(con {unique_player_count} jugadores únicos por historia)"
             )
             return True
             
         except Exception as error:
             raise OperationError(
                 technical_message=f"Error asignando historias a payoffs: {error}",
-                user_message="Error durante la asiganación de hsitorias al payoff"
+                user_message="Error durante la asignación de historias al payoff"
             )
 
     #Listo

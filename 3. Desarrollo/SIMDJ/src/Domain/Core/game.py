@@ -37,7 +37,6 @@ class Game:
     name: str = field(default="")
     description: str = field(default="")
     
-    # ✅ Campos de metadata para TreeBuilder
     total_scenarios: int = field(default=0)
     total_actions: int = field(default=0)
     total_histories: int = field(default=0)
