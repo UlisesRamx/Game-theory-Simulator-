@@ -453,7 +453,7 @@ class CLIHandler:
             if not self._ask_to_show_tree(context):
                 return
 
-            self._show_message(
+            self.formatter.display_message(
                 "Notification",
                 "Preparando datos del ÁRBOL DE DECISIONES...",
                 "Por favor espere mientras se procesan los escenarios y estrategias."
@@ -979,7 +979,7 @@ class CLIHandler:
     def _handle_export_both(self) -> None:
         try:
             confirm = self._ask_yes_no_question(
-                "¿Desea exportar TODOS los resultados (Excel + Árbol SVG)?"
+                "¿Desea exportar TODOS los resultados (Excel + Árbol SVG)? (S/N)"
             )
             
             if not confirm:
@@ -990,11 +990,8 @@ class CLIHandler:
                 )
                 return
 
-            self._show_message(
-                "Notification",
-                "Exportando resultados combinados...",
-                "Generando archivo Excel y diagrama del árbol."
-            )
+            self.formatter.display_message("Notification", "Exportando resultados combinados...",
+                                           "Generando archivo Excel y diagrama del árbol.")
 
             excel_result = self.dispatcher.execute("export_complete_results")
             
